@@ -1,0 +1,434 @@
+html, body{ /*ensures that there is no passing and margins*/
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  position: relative; /*background of website*/
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(purple, rgb(222, 131, 222)); /*color gradient*/
+  padding: 0;
+}
+
+
+.images{ /*formatting for images*/
+  top: 0%;
+  right: -75%;
+  position: relative;
+  display: inline-block
+}
+
+.images1 { /*formatting for images*/
+  top: 17%; /*distance from left*/
+  left: 1%;
+  position: absolute; /*positioning*/
+  display: inline-block; 
+  color: white; 
+}
+
+.homepage{ /*the background of the login page*/
+  display: flex;
+  position: relative; 
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(91, 1, 85, 0.911) 25%, rgb(171, 1, 177) 55%, rgb(217, 118, 230) 100%); /*remove pink*/
+  background-size: cover;
+  padding: 0;
+}
+
+.homepage1{ /*the background of the register page*/
+  display: flex;
+  position: relative; 
+  width: 100wh;
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(91, 1, 85, 0.911) 25%, rgb(171, 1, 177) 55%, rgb(217, 118, 230) 100%); /*remove pink*/
+  background-size: cover;
+  padding: 0;
+}
+
+.box1{ /*section about the login box*/
+    width: 40%; 
+    height: 90vh; 
+    top: 5%;
+    left: 40%;
+    position: relative;
+    background: #ffffff;
+    background: linear-gradient(to right, rgb(255, 188, 188) 5%, #fcfbe9 90%);
+    border-radius: 20px;
+    
+    
+
+}
+.box1:hover{ /*what occurs if the the login box is hovered over*/
+  height: 90vh; 
+  transition: 1s;
+  box-shadow: 0 0 30px 10px  rgb(243, 177, 25);
+  border-radius: 27px;
+}
+
+
+.signup{ /*the signup box*/
+position: relative;
+width:100%;
+height: 100%;
+}
+
+.signup label{ /*the label for the signup page*/
+color: #290255;
+font-size: 2.3em;
+justify-content: center;
+display: flex;
+margin: 50px;
+font-weight: bold;
+cursor: pointer;
+
+}
+.signup input{ /* the password and username for the signup page*/
+  color: #ffffff;
+width: 60%;
+height: 30px;
+background: #27005a;
+justify-content: center;
+display: flex;
+margin: 20px auto;
+padding: 10px;
+border: none;
+outline: none;
+border-radius: 5px;
+}
+.signup button{ /* the positoning and formatting of the signup button*/
+width: 60%;
+height: 40px;
+margin: 10px auto;
+justify-content: center;
+display: block;
+color: #ffffff;
+background: #1f0452;
+font-size: 1em;
+font-weight: bold;
+margin-top: 20px;
+outline: none;
+border: none;
+border-radius: 5px;
+}
+.signup button:hover{ /* what happens when you hover over the signup*/
+background: rgb(74, 0, 74)
+}
+
+.signup button a{ /*text on the signup button*/
+  text-decoration: none;
+  color: white;
+  font-family: none;
+ 
+}
+
+
+
+.box2{ /*box 2 where the sign up is located*/
+  width: 45%; 
+  height: 90vh; 
+  top: 5%;
+  left: 25%;
+  position: absolute;
+  background: #FFFDD0;
+  background: linear-gradient(to left, rgb(255, 188, 188) 5%, #fcfbe9 90%);
+  border-radius: 20px;
+  
+
+}
+.box2:hover{ /*what happens when you hover over the sign up box*/
+  
+  transition: 1s;
+  box-shadow: 0 0 40px 20px rgb(243, 177, 25);
+  border-radius: 30px;
+  
+}
+
+.login{ /*login page*/
+position: relative;
+width:100%;
+height: 100%;
+}
+
+.login input{ /* the input if the login which is username and password*/
+  color: #ffffff;
+width: 60%;
+height: 30px;
+background: #27005a;
+justify-content: center;
+display: flex;
+margin: 20px auto;
+padding: 10px;
+border: none;
+outline: none;
+border-radius: 5px;
+  text-decoration: none;
+}
+.login button{ /*what the login button looks like*/
+width: 60%;
+height: 40px;
+margin: 10px auto;
+justify-content: center;
+display: block;
+color: #ffffff;
+background: #1f0452;
+font-size: 1em;
+font-weight: bold;
+margin-top: 20px;
+outline: none;
+border: none;
+border-radius: 5px;
+font-family: 'Times New Roman', Times, serif;
+  text-decoration: none;
+} 
+.login button a{ /*text inside login box*/
+  text-decoration: none;
+  color: white;
+}
+
+.login button:hover{ /*what happens when you hover over the login*/
+background: rgb(78, 1, 78);
+}
+
+.login label{ /*the login page's formatting*/
+color: #290255;
+font-size: 2.3em;
+justify-content: center;
+display: flex;
+margin: 50px;
+font-weight: bold;
+cursor: pointer;
+position: relative;
+text-align: center;
+}
+
+
+.sidebar{ /*side bar*/
+    position: fixed;
+    width: 240px;
+    left: -240px;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(orange, white);
+    transition: all .5s ease;
+}
+  .sidebar header{ /*the title of the side bar*/
+    top: 4%;
+    font-size: 40px;
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+  }
+  .sidebar a{ /*the text in sidebar (the options)*/
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: white;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(243, 177, 25);
+    border-top: 1px solid rgba(203, 15, 15, 0.908);
+    border-left: 5px solid transparent;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.5s ease;
+  }
+  a.active,a:hover{ /*what happens when you hover over the box of text redirecting you to a different page in the nav bar */
+    border-left: 5px solid rgb(71, 1, 71);
+    color: rgb(136, 11, 136);
+  }
+  .sidebar a i{ /* formatting */
+    font-size: 23px;
+    margin-right: 16px;
+  }
+
+  .sidebar button{ /*the button formatting on the sidebar*/
+    font-size: 20px; 
+    color: white;
+    background: rgb(197, 70, 197);
+    line-height: 60px;
+    text-align: center;
+    user-select: none;
+    font-family: 'Times New Roman', sans-serif;
+    left: 10%;
+    top: 10%;
+    width:80%;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5%;
+    margin-bottom: 10px;
+  }
+
+
+  .sidebar button:hover{
+  transition: 1s;
+  box-shadow: 0 0 40px 20px rgba(71, 4, 107, 0.8);
+  
+  }
+
+  #check{
+    display: none;
+  }
+  label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    border-radius: 40px;
+    border: 1px solid black;
+    margin: 15px 30px;
+    font-size: 29px;
+    background: black;
+    top: 5%;
+    left: 2%;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+  }
+  label #cancel{
+    opacity: 0;
+    visibility: hidden;
+  }
+  #check:checked ~ .sidebar{
+    left: 0;
+  }
+  #check:checked ~ label #btn{
+    margin-left: 245px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #check:checked ~ label #cancel{
+    margin-left: 245px;
+    opacity: 1;
+    visibility: visible;
+  }
+  @media(max-width : 860px){
+    .sidebar{
+      height: auto;
+      width: 70px;
+      left: 0;
+      margin: 100px 0;
+    }
+    header,#btn,#cancel{
+      display: none;
+    }
+    span{
+      position: absolute;
+      margin-left: 23px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .sidebar a{
+      height: 60px;
+    }
+    .sidebar a i{
+      margin-left: -10px;
+    }
+    a:hover {
+      width: 200px;
+      background: inherit;
+    }
+    .sidebar a:hover span{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+.text1 h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    color: black;
+    outline: none;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    left: -190%;
+}
+  
+  .text1 h1:hover {
+    color: rgb(243, 177, 25);
+  }
+
+  .text3 h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: 1px;
+    transition: 700ms ease;
+    color: black;
+    outline: none;
+    position: relative;
+    text-align: center;
+    top: 0%;
+}
+  
+  .text3 h2:hover {
+    color: rgb(243, 177, 25);
+    letter-spacing: 2px;
+  }
+
+  .text4 h2 { /* text on the register page which displays student points*/
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: 1px;
+    transition: 700ms ease;
+    color: black;
+    outline: none;
+    position: relative;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    top: 0%;
+}
+  
+  .text4 h2:hover { /*what happens when the text is hovered*/
+    color: rgb(243, 177, 25);
+    letter-spacing: 2px;
+  }
+
+  .app-container {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    gap: 10px;
+    left: 21%;
+    text-align: center;
+    height: 60vh;
+    overflow-y:scroll;
+    min-height: 0;
+  }
+  
+  .app-container table {
+    position: relative;
+    justify-content: center;
+    border-collapse: collapse;
+    width: 50%;
+    /* font doesnt change */
+  }
+  
+  .app-container th, td {
+    border: 2px solid #000000;
+    padding: 8px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .app-container th {
+    background-color: #c091db; /*colour labels*/
+  }
+  
+  .app-container td {
+    background-color: rgb(231, 234, 194);
+  }
