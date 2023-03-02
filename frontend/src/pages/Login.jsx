@@ -2,12 +2,12 @@ import {useSelector, useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {toast} from 'react-toastify'
 import {useState, useEffect} from 'react'
-import {login, reset} from '../features/auth/authSlice'
+import {login, reset} from '../features/auth/authSlice' //importing 
 
 
 function Login() {
 
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({ //requires for a string 
         email: '',
         password: ''
     })
@@ -61,9 +61,9 @@ function Login() {
         return <h1>loading</h1>
     }
 
-    return (
+    return ( 
       <>
-          <div class = "homepage">
+          <div class = "homepage"> 
               <div class = "box1">
                   <div class="login">
                       <form onSubmit={onSubmit}>
@@ -80,12 +80,12 @@ function Login() {
               <div class = "text1">
                   
                   <h1> Engage.</h1>
-                  <h1> Encourage. </h1>
+                  <h1> Encourage. </h1> 
                   <h1> Succeed.</h1>
               </div>
   
               <div class = "images1">
-                  <img src = {require ("../images/logo1.png")} width = "400" height = "266" alt = ""/>
+                  <img src = {require ("../images/logo1.png")} width = "400" height = "216" alt = ""/>
               </div>
   
           </div>

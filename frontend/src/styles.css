@@ -7,13 +7,13 @@ html, body{ /*ensures that there is no passing and margins*/
   position: relative; /*background of website*/
   width: 100%;
   height: 100vh;
-  background: linear-gradient(purple, rgb(222, 131, 222)); /*color gradient*/
+  background: #05162b; 
   padding: 0;
 }
 
 
 .images{ /*formatting for images*/
-  top: 0%;
+  top: 2%;
   right: -75%;
   position: relative;
   display: inline-block
@@ -21,7 +21,7 @@ html, body{ /*ensures that there is no passing and margins*/
 
 .images1 { /*formatting for images*/
   top: 17%; /*distance from left*/
-  left: 1%;
+  left: 5%;
   position: absolute; /*positioning*/
   display: inline-block; 
   color: white; 
@@ -32,7 +32,7 @@ html, body{ /*ensures that there is no passing and margins*/
   position: relative; 
   width: 100%;
   height: 100vh;
-  background: linear-gradient(90deg, rgba(91, 1, 85, 0.911) 25%, rgb(171, 1, 177) 55%, rgb(217, 118, 230) 100%); /*remove pink*/
+  background: #05162b; /*remove pink*/
   background-size: cover;
   padding: 0;
 }
@@ -42,7 +42,7 @@ html, body{ /*ensures that there is no passing and margins*/
   position: relative; 
   width: 100wh;
   height: 100vh;
-  background: linear-gradient(90deg, rgba(91, 1, 85, 0.911) 25%, rgb(171, 1, 177) 55%, rgb(217, 118, 230) 100%); /*remove pink*/
+  background: #05162b; /*remove pink*/
   background-size: cover;
   padding: 0;
 }
@@ -54,7 +54,6 @@ html, body{ /*ensures that there is no passing and margins*/
     left: 40%;
     position: relative;
     background: #ffffff;
-    background: linear-gradient(to right, rgb(255, 188, 188) 5%, #fcfbe9 90%);
     border-radius: 20px;
     
     
@@ -67,28 +66,50 @@ html, body{ /*ensures that there is no passing and margins*/
   border-radius: 27px;
 }
 
+.box2{ /*section about the login box*/
+  width: 40%; 
+  height: 90vh; 
+  top: 5%;
+  left: 34%;
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  
+  
+
+}
+.box2:hover{ /*what occurs if the the login box is hovered over*/
+height: 90vh; 
+transition: 1s;
+box-shadow: 0 0 30px 10px  rgb(243, 177, 25);
+border-radius: 27px;
+}
+
+
 
 .signup{ /*the signup box*/
 position: relative;
 width:100%;
 height: 100%;
+
 }
 
 .signup label{ /*the label for the signup page*/
-color: #290255;
+color: #05162b;
 font-size: 2.3em;
-justify-content: center;
+text-align: center;
 display: flex;
 margin: 50px;
 font-weight: bold;
 cursor: pointer;
+
 
 }
 .signup input{ /* the password and username for the signup page*/
   color: #ffffff;
 width: 60%;
 height: 30px;
-background: #27005a;
+background:rgb(214, 241, 245);
 justify-content: center;
 display: flex;
 margin: 20px auto;
@@ -104,7 +125,8 @@ margin: 10px auto;
 justify-content: center;
 display: block;
 color: #ffffff;
-background: #1f0452;
+background: #05162b;
+font-family: 'Times New Roman', Times, serif;
 font-size: 1em;
 font-weight: bold;
 margin-top: 20px;
@@ -123,16 +145,13 @@ background: rgb(74, 0, 74)
  
 }
 
-
-
 .box2{ /*box 2 where the sign up is located*/
   width: 45%; 
   height: 90vh; 
   top: 5%;
   left: 25%;
   position: absolute;
-  background: #FFFDD0;
-  background: linear-gradient(to left, rgb(255, 188, 188) 5%, #fcfbe9 90%);
+  background: #FFF;
   border-radius: 20px;
   
 
@@ -155,7 +174,7 @@ height: 100%;
   color: #ffffff;
 width: 60%;
 height: 30px;
-background: #27005a;
+background: rgb(214, 241, 245);
 justify-content: center;
 display: flex;
 margin: 20px auto;
@@ -172,7 +191,7 @@ margin: 10px auto;
 justify-content: center;
 display: block;
 color: #ffffff;
-background: #1f0452;
+background: #05162b;
 font-size: 1em;
 font-weight: bold;
 margin-top: 20px;
@@ -210,17 +229,18 @@ text-align: center;
     left: -240px;
     height: 100%;
     top: 0;
-    background: linear-gradient(orange, white);
+    background: rgb(252, 250, 242);
     transition: all .5s ease;
+    border: #c40707;
+    border-radius: 3%;
 }
   .sidebar header{ /*the title of the side bar*/
-    top: 4%;
+    top: 10%;
     font-size: 40px;
-    color: white;
+    color: #290255;
     line-height: 70px;
     text-align: center;
     user-select: none;
-    font-family: 'Montserrat', sans-serif;
     position: relative;
   }
   .sidebar a{ /*the text in sidebar (the options)*/
@@ -249,25 +269,24 @@ text-align: center;
   .sidebar button{ /*the button formatting on the sidebar*/
     font-size: 20px; 
     color: white;
-    background: rgb(197, 70, 197);
+    background: #05162b;
     line-height: 60px;
     text-align: center;
     user-select: none;
     font-family: 'Times New Roman', sans-serif;
     left: 10%;
-    top: 10%;
+    top: 15%;
     width:80%;
     position: relative;
     cursor: pointer;
     border-radius: 5%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
 
   .sidebar button:hover{
   transition: 1s;
-  box-shadow: 0 0 40px 20px rgba(71, 4, 107, 0.8);
-  
+  box-shadow: 0 0 8px 0px rgba(3, 3, 51, 0.8);
   }
 
   #check{
@@ -278,7 +297,7 @@ text-align: center;
     cursor: pointer;
     color: white;
     border-radius: 40px;
-    border: 1px solid black;
+    border: 1px solid rgb(243, 177, 25);
     margin: 15px 30px;
     font-size: 29px;
     background: black;
@@ -346,17 +365,15 @@ text-align: center;
     font-family: 'Gambetta', serif;
     letter-spacing: -3px;
     transition: 700ms ease;
-    color: black;
+    color: rgb(243, 177, 25);
     outline: none;
     position: relative;
     text-align: center;
     top: 50%;
-    left: -190%;
+    left: -175%;
 }
   
-  .text1 h1:hover {
-    color: rgb(243, 177, 25);
-  }
+  
 
   .text3 h2 {
     font-size: 40px;
@@ -364,17 +381,14 @@ text-align: center;
     font-family: 'Gambetta', serif;
     letter-spacing: 1px;
     transition: 700ms ease;
-    color: black;
+    color: white;
     outline: none;
     position: relative;
     text-align: center;
     top: 0%;
 }
   
-  .text3 h2:hover {
-    color: rgb(243, 177, 25);
-    letter-spacing: 2px;
-  }
+ 
 
   .text4 h2 { /* text on the register page which displays student points*/
     font-size: 40px;
@@ -382,7 +396,7 @@ text-align: center;
     font-family: 'Gambetta', serif;
     letter-spacing: 1px;
     transition: 700ms ease;
-    color: black;
+    color: white;
     outline: none;
     position: relative;
     text-align: center;
@@ -391,10 +405,6 @@ text-align: center;
     top: 0%;
 }
   
-  .text4 h2:hover { /*what happens when the text is hovered*/
-    color: rgb(243, 177, 25);
-    letter-spacing: 2px;
-  }
 
   .app-container {
     position: relative;
@@ -426,9 +436,92 @@ text-align: center;
   }
   
   .app-container th {
-    background-color: #c091db; /*colour labels*/
+    background-color: rgb(214, 241, 245); /*colour labels*/
   }
   
   .app-container td {
-    background-color: rgb(231, 234, 194);
+    background-color: white;
   }
+  
+  .text6 h2 { /* text on the register page which displays student points*/
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: 1px;
+    transition: 700ms ease;
+    color: black;
+    outline: none;
+    position: relative;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    text-transform: capitalize;
+  }
+
+.box3{ /*section about the login box*/
+  width: 50%; 
+  height: 50vh; 
+  padding-top: 15px;
+  top: 5%;
+  left: 25%;
+  position: relative;
+  background: linear-gradient(to right, rgb(255, 188, 188) 5%, #fcfbe9 90%);
+  background: #F2F2F2;
+  border-radius: 20px;
+}
+.box3:hover{ /*what occurs if the the login box is hovered over*/
+  height: 50vh; 
+  transition: 1s;
+  box-shadow: 0 0 30px 10px  rgb(243, 177, 25);
+  border-radius: 27px;
+}
+
+.text7 h2 { /* text on the register page which displays student points*/
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: 1px;
+  transition: 700ms ease;
+  color: black;
+  outline: none;
+  position: relative;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  top: 0%;
+  text-transform: capitalize;
+}
+
+
+
+.text9 h2 { /* text on the register page which displays student points*/
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  letter-spacing: 1px;
+  transition: 700ms ease;
+  color: black;
+  outline: none;
+  position: relative;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: capitalize;
+}
+
+
+.text10 h2 { /* text on the register page which displays student points*/
+font-size: 14px;
+text-transform: uppercase;
+font-family: 'Gambetta', serif;
+letter-spacing: 1px;
+transition: 700ms ease;
+color: black;
+outline: none;
+position: relative;
+text-align: center;
+padding-left: 0;
+padding-right: 0;
+top: 0%;
+text-transform: capitalize;
+}

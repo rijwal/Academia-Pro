@@ -1,12 +1,31 @@
-import {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {toast} from 'react-toastify'
-import { createStudent, reset } from '../features/students/studentSlice'
 import StudentForm from '../components/studentForm'
+import {logout, reset} from '../features/auth/authSlice'
+import { useEffect, useState } from 'react'
+
+
+
 
 
 function AddStudent() {
+      const navigate = useNavigate()
+      const dispatch = useDispatch()
+      const {user} = useSelector((state) => state.auth)
+      const {students} = useSelector((state) => state.student)
+
+      const newStudents = JSON.parse(JSON.stringify(students))
+
+      const onDashboard = () => {
+        navigate('/')
+      }
+
+      const onLogout = () => {
+        dispatch(logout())
+        dispatch(reset())
+        navigate('/login')
+      }
     /*const [formData, setFormData] = useState({
         name: '',
         grade: '',
@@ -71,7 +90,20 @@ function AddStudent() {
       return (
         <>
           <div class = "homepage1">
-            <div class = "box1">
+          <input type="checkbox" id="check"/>
+          <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+          </label>
+
+          <div class="sidebar">
+            <header>MENU</header>
+            <button onClick={onDashboard}>Dashboard</button>
+            <button onClick={onLogout}>Log Out</button>
+
+
+          </div>
+            <div class = "box2">
               <div class="signup">
                   <StudentForm/>
               </div>

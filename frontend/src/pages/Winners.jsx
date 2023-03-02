@@ -93,8 +93,6 @@ function Winners() {
   const num2Random = sortedRandom[1].name
   const num3Random = sortedRandom[2].name
 
-
-
   return (
   
     <div class = "main">
@@ -105,25 +103,42 @@ function Winners() {
       </label>
 
       <div class="sidebar">
-        <header>Menu</header>
+        <header>MENU</header>
         <button onClick={onDashboard}>Dashboard</button>
         <button onClick={onLogout}>Log Out</button>
       </div>
 
       <div class = "images">
-        <img src = {require ("../images/logo1.png")} width = "210" height = "140" alt = ""/>
-     </div>
+        <img src = {require ("../images/logo1.png")} width = "260" height = "140" alt = ""/>
+      </div>
+      <div class = "text3">
+          <h2>Quarterly Winnings</h2>
+      </div>
 
-     <div class = "text3">
+      <div class = "box3">
+        <div class = "text6">
+          <h2>
+            Highest Points
+          </h2>
+          <div class =  "text7">
+            <h2>{highestGrade10} Had The Highest Number Of Points In Grade 10; They Win A Hoodie</h2>
+            <h2>{highestGrade11} Had The Highest Number Of Points In Grade 11; They Win A Hoodie</h2> 
+            <h2>{highestGrade12} Had The Highest Number Of Points In Grade 12; They Win A Hoodie</h2>
+          </div>
+        </div>
+              
+        <div class = "text9">
+          <h2>
+            Random Winners
+          </h2>
+          <div class =  "text10">
+            <h2>{num1Random} Is The Chosen Random Winner In Grade 10; They Win A Hoodie</h2>
+            <h2>{num2Random} Is The Chosen Random Winner In Grade 11; They Win Snacks</h2> 
+            <h2>{num3Random} Is The Chosen Random Winner In Grade 12; They Win A Sweatshirt</h2>
+          </div>
+        </div>
 
-        <h1>
-          Highest Points: {highestGrade10} , {highestGrade11} , {highestGrade12} all win a hoodie
-        </h1>
-        <h1>
-          Random Winners: {num1Random} wins hoodie , {num2Random} wins snacks , {num3Random} wins a certificate
-        </h1>
-        
-     </div>
+      </div>
   </div>
   )
 }

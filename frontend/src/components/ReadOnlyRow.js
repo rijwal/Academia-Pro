@@ -1,10 +1,9 @@
-import React from "react";
+import {useNavigate} from "react-router-dom";
 import { useDispatch } from 'react-redux'
-import { deleteStudent } from "../features/students/studentSlice"
+import { deleteStudent, editStudent } from "../features/students/studentSlice"
 
-const handleEditClick = () => {
 
-}
+
 
 const handleDeleteClick = () => {
 
@@ -13,6 +12,11 @@ const handleDeleteClick = () => {
 const ReadOnlyRow = ({ studenta}) => {
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const handleEditClick = () => {
+    navigate('/')
+  }
 
   return (
     <tr>
@@ -23,12 +27,7 @@ const ReadOnlyRow = ({ studenta}) => {
       <td>{studenta.score}</td>
       
       <td>
-        <button
-          type="button"
-          onClick={(event) => handleEditClick(event, studenta)}
-        >
-          Edit
-        </button>
+       
         <button type="button" onClick={() => dispatch(deleteStudent(studenta._id))}>
           Delete
         </button>
@@ -40,3 +39,10 @@ const ReadOnlyRow = ({ studenta}) => {
 };
 
 export default ReadOnlyRow;
+
+/*<button
+type="button"
+onClick={(event) => handleEditClick(event, studenta)}
+>
+Edit
+</button>*/

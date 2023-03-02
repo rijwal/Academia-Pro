@@ -2,7 +2,8 @@ import {useState, useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import {toast} from 'react-toastify'
-import {register, reset} from '../features/auth/authSlice'
+import {register, reset, logout} from '../features/auth/authSlice'
+
 
 function Register() {
 
@@ -21,6 +22,12 @@ function Register() {
   const {user, isLoading, isError, isSuccess, message} = useSelector(
     (state) => state.auth
     )
+
+    const onLogout = () => {
+      dispatch(logout())
+      dispatch(reset())
+      navigate('/login')
+    }
 
   useEffect(() => {
     if (isError) {
@@ -73,6 +80,7 @@ function Register() {
                   <input type="password" id="password2" name="password2" value={password2} placeholder="Confirm Password" onChange={onChange}/>
 
                   <button type="submit">Sign Up</button>
+                  <button onClick={onLogout}>Already have an Account? Login</button>
               </form>
           </div>
         </div>

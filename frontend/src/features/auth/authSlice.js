@@ -3,9 +3,9 @@ import authService from './authService'
 
 // Get user from localStorage
 
-const user = JSON.parse(localStorage.getItem('user'))
+const user = JSON.parse(localStorage.getItem('user')) //declaring the user as a json object from the local storage
 
-const initialState = {
+const initialState = { //decalring an intial state for the local stoarge to be set at
     user: null ? user : null,
     isError: false,
     isSuccess: false,
@@ -14,7 +14,7 @@ const initialState = {
 }
 
 //Register user
-export const register = createAsyncThunk('auth/register', async (user, thunkAPI) => {
+export const register = createAsyncThunk('auth/register', async (user, thunkAPI) => { //when registering, just runs the functions defined in the auth services and error is converted into thunk api message that is relayed back
     try {
         return await authService.register(user)
     } catch (error){
@@ -23,7 +23,7 @@ export const register = createAsyncThunk('auth/register', async (user, thunkAPI)
     }
 })
 
-export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => {
+export const login = createAsyncThunk('auth/login', async (user, thunkAPI) => { // same as above for login and logout
     try {
         return await authService.login(user)
     } catch (error){
@@ -38,7 +38,7 @@ export const logout = createAsyncThunk('auth/logout', async () => {
 
 
 export const authSlice = createSlice({
-    name: 'auth',
+    name: 'auth', //creating the slice based on the reducers in the local database
     initialState,
     reducers: {
         reset: (state) => {
@@ -48,7 +48,7 @@ export const authSlice = createSlice({
             state.message = ''
         }
     },
-    extraReducers: (builder) => {
+    extraReducers: (builder) => { // adding redux cases for each stage of each function that sets each variable in the initial state to a desired value
         builder
             .addCase(register.pending, (state) => {
                 state.isLoading = true

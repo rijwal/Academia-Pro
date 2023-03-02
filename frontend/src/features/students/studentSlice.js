@@ -70,6 +70,29 @@ export const deleteStudent = createAsyncThunk(
   }
 )
 
+export const editStudent = createAsyncThunk(
+  'students/edit',
+  async (id, studentData, thunkAPI) => {
+    try {
+      if(thunkAPI.getState().auth.user){
+        const token = thunkAPI.getState().auth.user.token
+        return await studentService.deleteStudent(id, studentData, token)
+    }
+    else{
+        console.log("User Gone editgoal")
+    }
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString()
+      return thunkAPI.rejectWithValue(message)
+    }
+  }
+)
+
 export const studentSlice = createSlice({
     name: 'student',
     initialState,
@@ -84,7 +107,7 @@ export const studentSlice = createSlice({
           .addCase(createStudent.fulfilled, (state, action) => {
             state.isLoading = false
             state.isSuccess = true
-            state.goals.push(action.payload)
+            state.students.push(action.payload)
           })
           .addCase(createStudent.rejected, (state, action) => {
             state.isLoading = false
@@ -113,6 +136,19 @@ export const studentSlice = createSlice({
             state.students = state.students.filter(
               (student) => student._id !== action.payload.id
             )
+          })
+          .addCase(editStudent.pending, (state) => {
+            state.isLoading = true
+          })
+          .addCase(editStudent.fulfilled, (state, action) => {
+            state.isLoading = false
+            state.isSuccess = true
+            state.students.push(action.payload)
+          })
+          .addCase(editStudent.rejected, (state, action) => {
+            state.isLoading = false
+            state.isError = true
+            state.message = action.payload
           })
     }
 })

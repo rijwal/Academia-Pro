@@ -43,7 +43,7 @@ function StudentForm () {
     return (
         <form onSubmit={onSubmit}>
             <label>Add Student</label>
-            <input type="text" id="name" name="name" value={name} placeholder="Name" onChange={onChange}/>
+            <input type="text" id="name" name="name" value={name} placeholder="Name" onChange={onChange} />
             <input type="number" id="age" name="age" value={age} placeholder="Age" onChange={onChange}/>
             <input type="number" id="grade" name="grade" value={grade} placeholder="Grade" onChange={onChange}/>
             <input type="number" id="sportingEvents" name="sportingEvents" value={sportingEvents} placeholder="Sporting Events" onChange={onChange}/>

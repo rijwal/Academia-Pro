@@ -6,9 +6,12 @@ import Login from './pages/Login'
 import Register from './pages/Register';
 import AddStudent from './pages/AddStudent'
 import Winners from './pages/Winners';
+import EditStudent from './pages/EditStudent'
 
+// to route all buttons and pages
+// defines directions in order to route all control types
 
-function App() {
+function App() { 
   return (
     <>
       <Router className='container'>
@@ -19,6 +22,7 @@ function App() {
             <Route path='/register' element={<Register/>}/>
             <Route path='/add' element={<AddStudent/>}/>
             <Route path='/winners' element={<Winners/>}/>
+            <Route path='/edit' element={<EditStudent/>}/>
           </Routes>
         </div>
       </Router>
