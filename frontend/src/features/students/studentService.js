@@ -38,7 +38,7 @@ const deleteStudent = async (studentId, token) => {
     const response = await axios.delete(API_URL + studentId, config)
   
     return response.data
-  }
+}
 
 const studentService = {
     getStudents, createStudent, deleteStudent
